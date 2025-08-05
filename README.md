@@ -1,1 +1,1 @@
-## Housing Affordability Analysis Dashboard
+# Housing Affordability Analysis Dashboard
