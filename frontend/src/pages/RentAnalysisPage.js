@@ -3,17 +3,13 @@ import CitySelector from "../components/CitySelector";
 import TableauViz from "../components/TableauViz"; // ready to use when you embed
 
 export default function RentAnalysisPage() {
-  const [city, setCity] = useState("Toronto");
+  const [city, setCity] = useState("");
 
   return (
     <section className="page">
       <h2>Rent Analysis</h2>
       <div className="toolbar">
-        <CitySelector
-          cities={["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa"]}
-          value={city}
-          onChange={setCity}
-        />
+        <CitySelector value={city} onChange={setCity} />
       </div>
 
       <div className="panel placeholder">
@@ -24,6 +20,7 @@ export default function RentAnalysisPage() {
 
       <div className="panel placeholder">
         <h3>Rent Distribution / Unit Types</h3>
+            <TableauViz src="https://public.tableau.com/views/RentDataVisualization/MedianRent" cityFilterField="City" cityValue={city} />
         <p>📈 Placeholder: Bar/Box plots by unit type for <b>{city}</b></p>
       </div>
     </section>

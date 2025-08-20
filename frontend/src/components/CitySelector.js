@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default function CitySelector({ cities, value, onChange }) {
+export default function CitySelector({ value, onChange }) {
+  const [cities, setCities] = useState([]);
+
+  useEffect(() => {
+    fetch("/cities.json")
+      .then((res) => res.json())
+      .then((data) => setCities(data))
+      .catch((err) => console.error("Failed to load cities:", err));
+  }, []);
+
   return (
-    <label>
-      Select City:{" "}
+    <div className="selector">
+      <label>City: </label>
       <select value={value} onChange={(e) => onChange(e.target.value)}>
-        {cities.map((city) => (
-          <option key={city} value={city}>{city}</option>
+        {cities.map((c) => (
+          <option key={c} value={c}>{c}</option>
         ))}
       </select>
-    </label>
+    </div>
   );
 }

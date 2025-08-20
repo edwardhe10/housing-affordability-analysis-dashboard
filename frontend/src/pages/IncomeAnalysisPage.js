@@ -3,17 +3,13 @@ import CitySelector from "../components/CitySelector";
 // import TableauViz from "../components/TableauViz";
 
 export default function IncomeAnalysisPage() {
-  const [city, setCity] = useState("Toronto");
+  const [city, setCity] = useState("");
 
   return (
     <section className="page">
       <h2>Income Analysis</h2>
       <div className="toolbar">
-        <CitySelector
-          cities={["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa"]}
-          value={city}
-          onChange={setCity}
-        />
+        <CitySelector value={city} onChange={setCity} />
       </div>
 
       <div className="panel placeholder">
