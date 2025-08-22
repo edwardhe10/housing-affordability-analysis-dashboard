@@ -158,3 +158,37 @@ body {
 .placeholder p {
   margin: 8px 0;
 }
+
+/* Make tableau-viz responsive and clean */
+tableau-viz {
+  width: 100% !important;
+  height: 100vh !important;
+  border: none;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Remove extra scrollbars inside the iframe Tableau creates */
+tableau-viz iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+/* Adjust panels so they look clean */
+.panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
