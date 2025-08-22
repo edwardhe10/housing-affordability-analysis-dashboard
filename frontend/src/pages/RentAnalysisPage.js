@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CitySelector from "../components/CitySelector";
-//import TableauViz from "../components/TableauViz"; // ready to use when you embed
 
 export default function RentAnalysisPage() {
   const [city, setCity] = useState("");
