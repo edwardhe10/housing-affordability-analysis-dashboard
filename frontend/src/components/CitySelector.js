@@ -14,6 +14,7 @@ export default function CitySelector({ value, onChange }) {
     <div className="selector">
       <label>City: </label>
       <select value={value} onChange={(e) => onChange(e.target.value)}>
+        <option value="All">All</option> 
         {cities.map((c) => (
           <option key={c} value={c}>{c}</option>
         ))}

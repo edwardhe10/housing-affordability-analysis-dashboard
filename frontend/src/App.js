@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import RentAnalysisPage from "./pages/RentAnalysisPage";
 import IncomeAnalysisPage from "./pages/IncomeAnalysisPage";
 import "./App.css";
@@ -12,6 +13,7 @@ function Nav() {
       <Link className="brand" to="/">Housing Affordability Dashboard</Link>
       <nav>
         <Link className={pathname === "/" ? "active" : ""} to="/">Home</Link>
+        <Link className={pathname === "/about" ? "active" : ""} to="/about">About</Link>
         <Link className={pathname === "/rent-analysis" ? "active" : ""} to="/rent-analysis">Rent Analysis</Link>
         <Link className={pathname === "/income-analysis" ? "active" : ""} to="/income-analysis">Income Analysis</Link>
       </nav>
@@ -26,6 +28,7 @@ export default function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/rent-analysis" element={<RentAnalysisPage />} />
           <Route path="/income-analysis" element={<IncomeAnalysisPage />} />
         </Routes>

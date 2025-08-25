@@ -13,16 +13,55 @@ export default function RentAnalysisPage() {
 
       <div className="panel placeholder">
         <h3>Average Rent Over Time</h3>
-        { <tableau-viz id="tableauViz"
+        <tableau-viz id="tableauViz"
             style={{ width: "100%", height: "100vh" }}
             device="desktop"       
             key={city}
             src='https://public.tableau.com/views/RentDataVisualization/Dashboard1'   
-            toolbar="bottom" hide-tabs>
-            <viz-filter field="City" value={city}> </viz-filter>    
-            </tableau-viz> }
+            toolbar="bottom" 
+            hide-tabs>
+            {city !== "All" && (
+                <viz-filter field="City" value={city}></viz-filter>
+            )}
+            </tableau-viz>
         <p>📊 Placeholder: Rent trends for <b>{city}</b></p>
       </div>
+      <div>
+        <tableau-viz id="tableauViz"
+            style={{ width: "100%", height: "100vh" }}
+            device="desktop"       
+            src='https://public.tableau.com/views/RentDataVisualization/MedianRent_1'
+            toolbar="bottom"
+            hide-tabs>
+            </tableau-viz>
+      </div>
+      <div>
+        <tableau-viz id="tableauViz"
+            style={{ width: "100%", height: "100vh" }}
+            device="desktop"
+            key={city}       
+            src='https://public.tableau.com/views/RentDataVisualization/CityRentGorwth'   
+            toolbar="bottom"
+            hide-tabs>
+            {city !== "All" && (
+                <viz-filter field="City" value={city}></viz-filter>
+            )} 
+            </tableau-viz>
+      </div>
+      <div>
+        <tableau-viz id="tableauViz"
+            style={{ width: "100%", height: "100vh" }}
+            device="desktop"
+            key={city}       
+            src='https://public.tableau.com/views/RentDataVisualization/Dashboard4'   
+            toolbar="bottom" 
+            hide-tabs>
+            {city !== "All" && (
+                <viz-filter field="City" value={city}></viz-filter>
+            )}
+            </tableau-viz>
+      </div>
+      
 
       <div className="panel placeholder">
         <h3>Rent Distribution / Unit Types</h3>
