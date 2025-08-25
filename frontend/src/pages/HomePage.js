@@ -15,10 +15,6 @@ export default function HomePage() {
         <Link to="/rent-analysis" className="cta cta-blue">Rent Analysis</Link>
         <Link to="/income-analysis" className="cta cta-green">Income Analysis</Link>
       </div>
-
-      <div className="home-note">
-        <span className="dot" /> After long inactivity, embedded graphs may take a few seconds to load.
-      </div>
     </section>
   );
 }
