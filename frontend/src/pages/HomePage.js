@@ -5,9 +5,9 @@ export default function HomePage() {
   return (
     <section className="home-wrap">
       <div className="home-heading">
-        <h1>Canadian Housing Affordability</h1>
+        <h1>Ontario Rental Housing Affordability</h1>
         <p className="home-sub">
-          Explore rent trends and income dynamics across cities. Choose a section to get started.
+          Explore rent trends and income dynamics across Ontario cities. Choose a section to get started.
         </p>
       </div>
 
