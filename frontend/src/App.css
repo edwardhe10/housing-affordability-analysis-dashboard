@@ -99,6 +99,10 @@ body {
   background: #2563eb;
 }
 
+.cta-red {
+  background: #ef4444;
+}
+
 .cta-green {
   background: #22c55e;
 }
@@ -156,7 +160,7 @@ body {
   margin-top: 0;
 }
 
-.placeholder p {
+.panel-content p {
   margin: 8px 0;
 }
 

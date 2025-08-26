@@ -12,6 +12,7 @@ export default function HomePage() {
       </div>
 
       <div className="home-cta">
+        <Link to="/about" className="cta cta-red">About</Link>
         <Link to="/rent-analysis" className="cta cta-blue">Rent Analysis</Link>
         <Link to="/income-analysis" className="cta cta-green">Income Analysis</Link>
       </div>
