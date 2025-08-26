@@ -23,14 +23,13 @@ export default function IncomeAnalysisPage() {
                 </p>
 
                 <p className="source">
-                    <b>Data Source:</b>
+                    <b>Data Source: </b>
                     <a
                     href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Statistics Canada (StatsCan)
+                    Statistics Canada, Table 11-10-0190-01
                     </a>
-                    .
                 </p>
 
                 <h3>What You'll Find on This Page</h3>
@@ -61,7 +60,7 @@ export default function IncomeAnalysisPage() {
                 <h3>Key Insights:</h3>
                 <ul>
                     <li>Rent is growing at a much faster rate than income.</li>
-                    <li>By 2022, rent prices have increased enough to have broken the affordability threshold.</li>
+                    <li>By 2022, rent prices have increased enough to have broken the affordability threshold of <b>30%</b></li>
                     <li>Renting is no longer as affordable as before and if the pattern continues, many people may begin to struggle to find housing.</li>
                 </ul>
             </div>
