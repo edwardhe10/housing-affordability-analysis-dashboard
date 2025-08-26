@@ -60,9 +60,9 @@ export default function IncomeAnalysisPage() {
             <div className="panel panel-content">
                 <h3>Key Insights:</h3>
                 <ul>
-                    <li>key insight 1</li>
-                    <li>key insight 2</li>
-                    <li>key insight 3</li>
+                    <li>Rent is growing at a much faster rate than income.</li>
+                    <li>By 2022, rent prices have increased enough to have broken the affordability threshold.</li>
+                    <li>Renting is no longer as affordable as before and if the pattern continues, many people may begin to struggle to find housing.</li>
                 </ul>
             </div>
         </section>
