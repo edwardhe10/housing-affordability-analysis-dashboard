@@ -17,7 +17,7 @@ export default function IncomeAnalysisPage() {
         <p>
           This dashboard uses Statistics Canada data to display income from 2019 to 2023 in Ontario while 
           the rent prices uses the same data from the rent analysis. Median after-tax income was chosen to 
-          most closely represent a renter’s income state when paying rent. Additionally, data was narrowed 
+          most closely represent a renter's income state when paying rent. Additionally, data was narrowed 
           down to persons not in economic families to represent the majority of individual renters as rent 
           prices are per person. The page aims to inform renters and bring awareness to renting affordability. 
         </p>
@@ -56,12 +56,12 @@ export default function IncomeAnalysisPage() {
           hide-tabs>
         </tableau-viz>
       </div>
-      
+
       <div className="panel panel-content">
         <h3>Key Insights:</h3>
         <ul>
           <li>Rent is growing at a much faster rate than income.</li>
-          <li>By 2022, rent prices have increased enough to have broken the affordability threshold of <b>30%</b></li>
+          <li>By 2022, rent prices have increased enough to have broken the affordability threshold of <b>30%</b>.</li>
           <li>Renting is no longer as affordable as before and if the pattern continues, many people may begin to struggle to find housing.</li>
         </ul>
       </div>
