@@ -24,7 +24,12 @@ export default function RentAnalysisPage() {
                 <viz-filter field="City" value={city}></viz-filter>
             )}
             </tableau-viz>
-        <p>📊 Placeholder: Rent trends for <b>{city}</b></p>
+        <strong>Key Insights:</strong>
+        <ul>
+          <li>Overall rent trends across Ontario cities.</li>
+          <li>Significant increases in certain cities post-2020.</li>
+          <li>City-specific trends when a city is selected.</li>
+        </ul>
       </div>
       <div className="panel panel-content">
         <tableau-viz id="tableauViz"

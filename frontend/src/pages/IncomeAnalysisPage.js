@@ -1,26 +1,18 @@
-import React, { useState } from "react";
-import CitySelector from "../components/CitySelector";
-// import TableauViz from "../components/TableauViz";
+import React from "react";
 
 export default function IncomeAnalysisPage() {
-  const [city, setCity] = useState("");
-
   return (
     <section className="page">
       <h2>Income Analysis</h2>
-      <div className="toolbar">
-        <CitySelector value={city} onChange={setCity} />
-      </div>
 
-      <div className="panel placeholder">
-        <h3>Median Household Income Over Time</h3>
-        {/* <TableauViz src="YOUR_TABLEAU_INCOME_VIEW_URL" cityFilterField="City" cityValue={city} /> */}
-        <p>💵 Placeholder: Income trends for <b>{city}</b></p>
-      </div>
-
-      <div className="panel placeholder">
-        <h3>Affordability (Rent-to-Income)</h3>
-        <p>🧮 Placeholder: KPI cards & ratio charts for <b>{city}</b></p>
+      <div className="panel panel-content">
+        <tableau-viz id="tableauViz"
+            style={{ width: "100%", height: "100vh" }}
+            device="desktop"       
+            src='https://public.tableau.com/views/IncomeAnalysis_17557250314520/Dashboard'
+            toolbar="bottom"
+            hide-tabs>
+            </tableau-viz>
       </div>
     </section>
   );
