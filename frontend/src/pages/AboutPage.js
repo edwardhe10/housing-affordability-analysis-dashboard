@@ -3,7 +3,23 @@ import React from "react";
 export default function AboutPage() {
   return (
     <div className="page about">
-
+      {/* About Us */}
+      <section className="panel about-card">
+        <h2>👥 About Us</h2>
+        <p>
+          My name is Anna Wang! I'm currently a second year student studying Data Science 
+          at the University of Waterloo and have an interest in combining technology and finance! 
+          I enjoyed experimenting and learning new skills while using visuals in this project and 
+          look forward to trying new things!
+        </p>
+        <p>
+          My name is Edward He and I'm currently a third year student studying Computational Mathematics
+          at the University of Waterloo. I have a strong interest in using data to solve real-world problems.
+          I enjoyed learning new skills in data analysis and visualization and I look forward to using these skills
+          in the future for machine learning and data science.
+        </p>
+      </section>
+      
       {/* What is the Project */}
       <section className="panel about-card">
         <h2>📌 What is This Project?</h2>
@@ -95,23 +111,6 @@ export default function AboutPage() {
           <li>Add interactive map.</li>
           <li>Build a predictive model to predict future housing trends.</li>
         </ul>
-      </section>
-
-      {/* About Us */}
-      <section className="panel about-card">
-        <h2>👥 About Us</h2>
-        <p>
-          My name is Anna Wang! I'm currently a second year student studying Data Science 
-          at the University of Waterloo and have an interest in combining technology and finance! 
-          I enjoyed experimenting and learning new skills while using visuals in this project and 
-          look forward to trying new things!
-        </p>
-        <p>
-          My name is Edward He and I'm currently a third year student studying Computational Mathematics
-          at the University of Waterloo. I have a strong interest in using data to solve real-world problems.
-          I enjoyed learning new skills in data analysis and visualization and I look forward to using these skills
-          in the future for machine learning and data science.
-        </p>
       </section>
     </div>
   );
