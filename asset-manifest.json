@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/housing-affordability-analysis-dashboard/static/css/main.9315f9db.css",
-    "main.js": "/housing-affordability-analysis-dashboard/static/js/main.aa6b948e.js",
+    "main.js": "/housing-affordability-analysis-dashboard/static/js/main.5f30a1d4.js",
     "index.html": "/housing-affordability-analysis-dashboard/index.html",
     "main.9315f9db.css.map": "/housing-affordability-analysis-dashboard/static/css/main.9315f9db.css.map",
-    "main.aa6b948e.js.map": "/housing-affordability-analysis-dashboard/static/js/main.aa6b948e.js.map"
+    "main.5f30a1d4.js.map": "/housing-affordability-analysis-dashboard/static/js/main.5f30a1d4.js.map"
   },
   "entrypoints": [
     "static/css/main.9315f9db.css",
-    "static/js/main.aa6b948e.js"
+    "static/js/main.5f30a1d4.js"
   ]
 }
