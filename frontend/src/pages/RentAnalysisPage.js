@@ -126,14 +126,48 @@ export default function RentAnalysisPage() {
         </tableau-viz>
       </div>
 
-      <div className="stats-grid">
-        <StatsCard title="Title" value="val" color="green" />
-        <StatsCard title="Title" value="val" color="red" />
-        <StatsCard title="Title" value="xxx%" color="blue" />
-        <StatsCard title="Title" value="xxx" color="purple" />
-        <StatsCard title="Title" value="xxx" color="amber" />
-        <StatsCard title="Title" value="xxx%" color="pink" />
-      </div>
+      <section className="stat-wrap">
+        <div className="stat-grid">
+        <StatsCard
+          title="LARGEST MEDIAN RENT PRICE GROWTH"
+          value="Haldimand County"
+          showMeta
+          delta="94.28%"
+          deltaDir="up"
+          since="Since 2019"/>
+        <StatsCard
+          title="SMALLEST MEDIAN RENT PRICE GROWTH"
+          value="Brock"
+          showMeta
+          delta="10.02%"
+          deltaDir="up"
+          since="Since 2019"/>
+        <StatsCard
+          title="AVERAGE MEDIAN RENT PRICE GROWTH SINCE 2019"
+          value="33.09%"/>
+        <StatsCard
+          title="HIGHEST MEDIAN RENT IN 2024"
+          value="Toronto: $1864"
+          showMeta
+          delta="19.33%"
+          deltaDir="up"
+          since="Since 2019"/>
+        <StatsCard
+          title="LOWEST MEDIAN RENT IN 2024"
+          value="Elliot Lake: $805"
+          showMeta
+          delta="26.18%"
+          deltaDir="up"
+          since="Since 2019"/>
+        <StatsCard
+          title="MEDIAN RENT IN 2024"
+          value="$1255"
+          showMeta
+          delta="26.64%"
+          deltaDir="up"
+          since="Since 2019"/>
+        </div>
+      </section>
 
       <div className="panel panel-content">
         <h3>Key Insights:</h3>

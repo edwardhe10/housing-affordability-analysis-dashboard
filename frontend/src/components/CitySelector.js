@@ -4,7 +4,7 @@ export default function CitySelector({ value, onChange }) {
   const [cities, setCities] = useState([]);
 
   useEffect(() => {
-    fetch("/cities.json")
+    fetch("./cities.json")
       .then((res) => res.json())
       .then((data) => setCities(data))
       .catch((err) => console.error("Failed to load cities:", err));

@@ -1,4 +1,5 @@
 import React from "react";
+import StatsCard from "../components/StatsCard";
 
 export default function IncomeAnalysisPage() {
   return (
@@ -56,6 +57,24 @@ export default function IncomeAnalysisPage() {
           hide-tabs>
         </tableau-viz>
       </div>
+
+      <section className="stat-wrap">
+        <div className="stat-grid">
+          <StatsCard
+            title="AVERAGE INCOME SPENT ON RENT IN 2023"
+            value="39.01%"
+            showMeta
+            delta="26.49%"
+            deltaDir="up"
+            since="Since 2019"/>
+          <StatsCard
+            title="INCOME GROWTH SINCE 2019"
+            value="3.57%"/>
+          <StatsCard
+            title="RENT GROWTH SINCE 2019"
+            value="31.02%"/>
+        </div>
+      </section>
 
       <div className="panel panel-content">
         <h3>Key Insights:</h3>

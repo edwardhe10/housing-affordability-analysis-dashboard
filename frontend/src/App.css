@@ -246,59 +246,74 @@ tableau-viz iframe {
   font-weight: 500;
 }
 
-/* Container grid */
-.stats-grid {
+/* Stats section */
+.stat-wrap {
+  border-radius: 18px;
+  padding: 22px;
+  background: linear-gradient(135deg, #6a77ff 0%, #7a4ef7 50%, #6cc2ff 100%);
+  color: #fff;
+  margin: 24px 0;
+}
+.stat-heading {
+  margin: 0 0 14px 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.stat-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  margin: 24px 0;
 }
+@media (min-width: 720px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .stat-grid { grid-template-columns: repeat(3, 1fr); } }
 
-/* Responsive: 2 cols on medium, 3 cols on large */
-@media (min-width: 700px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Card base */
+/* Glass card */
 .stat-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  overflow: hidden;
-  border-top: 6px solid transparent; /* color set by modifiers */
+  background: rgba(255, 255, 255, 0.96);
+  color: #111827;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  backdrop-filter: blur(6px);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+}
+
+/* Top row now only holds title */
+.stat-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
+  justify-content: space-between; /* keeps layout future-proof */
 }
-
-/* Card text */
-.stat-card__title {
-  color: #6b7280; /* gray-500 */
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.stat-card__value {
-  font-size: 22px;
+.stat-title {
+  font-size: 12px;
+  letter-spacing: .6px;
   font-weight: 800;
-  color: #1f2937; /* gray-800 */
-  line-height: 1.2;
+  color: #6b7280; /* muted */
+  text-transform: uppercase;
 }
 
-/* Color modifiers (border-top) */
-.stat-card.is-green { border-top-color: #22c55e; }   /* green-500 */
-.stat-card.is-red { border-top-color: #ef4444; }     /* red-500 */
-.stat-card.is-blue { border-top-color: #2563eb; }    /* blue-600 */
-.stat-card.is-purple { border-top-color: #7c3aed; }  /* purple-600 */
-.stat-card.is-amber { border-top-color: #f59e0b; }   /* amber-500 */
-.stat-card.is-pink { border-top-color: #ec4899; }    /* pink-500 */
+/* Big value */
+.stat-value {
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Optional meta row */
+.stat-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.stat-delta { font-weight: 800; }
+.stat-delta.up   { color: #16a34a; } /* green */
+.stat-delta.down { color: #dc2626; } /* red */
+.stat-delta.flat { color: #64748b; } /* gray */
+.stat-since { color: #94a3b8; }
