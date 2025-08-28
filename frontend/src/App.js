@@ -33,7 +33,7 @@ export default function App() {
           <Route path="/income-analysis" element={<IncomeAnalysisPage />} />
         </Routes>
       </main>
-      <footer className="footer">© {new Date().getFullYear()} Housing Affordability</footer>
+      <footer className="footer">© {new Date().getFullYear()} Housing Affordability Dashboard</footer>
     </>
   );
 }
