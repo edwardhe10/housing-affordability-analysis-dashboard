@@ -245,3 +245,60 @@ tableau-viz iframe {
   margin: 16px 0;
   font-weight: 500;
 }
+
+/* Container grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+/* Responsive: 2 cols on medium, 3 cols on large */
+@media (min-width: 700px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card base */
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  overflow: hidden;
+  border-top: 6px solid transparent; /* color set by modifiers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card text */
+.stat-card__title {
+  color: #6b7280; /* gray-500 */
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-card__value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1f2937; /* gray-800 */
+  line-height: 1.2;
+}
+
+/* Color modifiers (border-top) */
+.stat-card.is-green { border-top-color: #22c55e; }   /* green-500 */
+.stat-card.is-red { border-top-color: #ef4444; }     /* red-500 */
+.stat-card.is-blue { border-top-color: #2563eb; }    /* blue-600 */
+.stat-card.is-purple { border-top-color: #7c3aed; }  /* purple-600 */
+.stat-card.is-amber { border-top-color: #f59e0b; }   /* amber-500 */
+.stat-card.is-pink { border-top-color: #ec4899; }    /* pink-500 */

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CitySelector from "../components/CitySelector";
+import StatsCard from "../components/StatsCard";
 
 export default function RentAnalysisPage() {
   const [city, setCity] = useState("");
@@ -65,74 +66,95 @@ export default function RentAnalysisPage() {
           </li>
           <li>Key insights into affordability for rental housing.</li>
         </ul>
-
       </div>
+
       <div className="toolbar">
         <CitySelector value={city} onChange={setCity} />
       </div>
 
       <div className="panel panel-content">
         <tableau-viz id="tableauViz"
-            style={{ width: "100%", height: "100vh" }}
-            device="desktop"
-            key={city}       
-            src='https://public.tableau.com/views/RentDataVisualization/CityRentGorwth'   
-            toolbar="bottom"
-            hide-tabs>
-            {city !== "All" && (
-                <viz-filter field="City" value={city}></viz-filter>
-            )} 
-            </tableau-viz>
-      </div>
-      <div className="panel panel-content">
-        <tableau-viz id="tableauViz"
-            style={{ width: "100%", height: "100vh" }}
-            device="desktop"       
-            key={city}
-            src='https://public.tableau.com/views/RentDataVisualization/Dashboard1'   
-            toolbar="bottom" 
-            hide-tabs>
-            {city !== "All" && (
-                <viz-filter field="City" value={city}></viz-filter>
-            )}
-            </tableau-viz>
-        <strong>Key Insights:</strong>
-        <ul>
-          <li>Overall rent trends across Ontario cities.</li>
-          <li>Significant increases in certain cities post-2020.</li>
-          <li>City-specific trends when a city is selected.</li>
-        </ul>
-      </div>
-      <div className="panel panel-content">
-        <tableau-viz id="tableauViz"
-            style={{ width: "100%", height: "100vh" }}
-            device="desktop"       
-            src='https://public.tableau.com/views/RentDataVisualization/MedianRent_1'
-            toolbar="bottom"
-            hide-tabs>
-            </tableau-viz>
-      </div>
-      <div className="panel panel-content">
-        <tableau-viz id="tableauViz"
-            style={{ width: "100%", height: "100vh" }}
-            device="desktop"   
-            src='https://public.tableau.com/views/RentDataVisualization/Dashboard4'   
-            toolbar="bottom" 
-            hide-tabs>
-            </tableau-viz>
-      </div>
-      <div className="panel panel-content">
-        <tableau-viz id="tableauViz"
-            style={{ width: "100%", height: "100vh" }}
-            device="desktop"   
-            src='https://public.tableau.com/views/RentDataVisualization/PercentageGrowth'
-            toolbar="bottom" 
-            hide-tabs>
-            </tableau-viz>
+          style={{ width: "100%", height: "100vh" }}
+          device="desktop"
+          key={city}       
+          src='https://public.tableau.com/views/RentDataVisualization/CityRentGorwth'   
+          toolbar="bottom"
+          hide-tabs>
+          {city !== "All" && (<viz-filter field="City" value={city}></viz-filter>)} 
+        </tableau-viz>
       </div>
 
       <div className="panel panel-content">
-        <h3>bahhhhhhhhhhhh</h3>
+        <tableau-viz id="tableauViz"
+          style={{ width: "100%", height: "100vh" }}
+          device="desktop"       
+          key={city}
+          src='https://public.tableau.com/views/RentDataVisualization/Dashboard1'   
+          toolbar="bottom" 
+          hide-tabs>
+          {city !== "All" && (<viz-filter field="City" value={city}></viz-filter>)}
+        </tableau-viz>
+      </div>
+
+      <div className="panel panel-content">
+        <tableau-viz id="tableauViz"
+          style={{ width: "100%", height: "100vh" }}
+          device="desktop"       
+          src='https://public.tableau.com/views/RentDataVisualization/MedianRent_1'
+          toolbar="bottom"
+          hide-tabs>
+        </tableau-viz>
+      </div>
+
+      <div className="panel panel-content">
+        <tableau-viz id="tableauViz"
+          style={{ width: "100%", height: "100vh" }}
+          device="desktop"   
+          src='https://public.tableau.com/views/RentDataVisualization/Dashboard4'   
+          toolbar="bottom" 
+          hide-tabs>
+        </tableau-viz>
+      </div>
+
+      <div className="panel panel-content">
+        <tableau-viz id="tableauViz"
+          style={{ width: "100%", height: "100vh" }}
+          device="desktop"   
+          src='https://public.tableau.com/views/RentDataVisualization/PercentageGrowth'
+          toolbar="bottom" 
+          hide-tabs>
+        </tableau-viz>
+      </div>
+
+      <div className="stats-grid">
+        <StatsCard title="Title" value="val" color="green" />
+        <StatsCard title="Title" value="val" color="red" />
+        <StatsCard title="Title" value="xxx%" color="blue" />
+        <StatsCard title="Title" value="xxx" color="purple" />
+        <StatsCard title="Title" value="xxx" color="amber" />
+        <StatsCard title="Title" value="xxx%" color="pink" />
+      </div>
+
+      <div className="panel panel-content">
+        <h3>Key Insights:</h3>
+        <ul>
+          <li>
+            Toronto is consistently an outlier in rent price having the highest out of all 
+            Ontario cities and strays the farthest from the median
+          </li>
+          <li>In 2024, Elliot Lake has the lowest median rent price.</li>
+          <li>
+            3-bedroom units have the highest prices out of the 4 unit types, but unit types 
+            appear to be growing at the same rate.
+          </li>
+          <li>Row structures of 3 units and over tend to have higher rent prices.</li>
+          <li>All cities saw an increase in rent price in 2024 compared to 2019.</li>
+          <li>
+            Haldimand County saw the biggest percentage growth of <b>94.28%</b> in 
+            median rent price from 2019 to 2014.
+          </li>
+          <li>Brock saw the lowest percentage growth of <b>10.02%</b> in median rent price from 2019 to 2014.</li>
+        </ul>
       </div>
     </section>
   );
